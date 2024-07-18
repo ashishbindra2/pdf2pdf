@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Upload PDF{% endblock %}
+
+{% block content %}
+
+
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Upload a PDF</h1>
+        <p class="col-md-8 fs-4">You can upload pdf</p>
+        <form method="post" action="/upload_file"  enctype = "multipart/form-data">
+            <div class="mb-3">
+                <label for="pdf_file" class="form-label">Please upload PDF file</label>
+                <input class="form-control form-control-sm" id="pdf_file" name="pdf_file" type="file">
+            </div>
+            <button class="btn btn-primary btn-sm" type="submit">Upload</button>
+        </form>
+    </div>
+</div>
+
+
+<footer class="pt-3 mt-4 text-body-secondary border-top">
+    © 2024
+</footer>
+
+
+{% endblock %}
